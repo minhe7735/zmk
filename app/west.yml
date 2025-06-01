@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: minhe7735
+      url-base: https://github.com/minhe7735
   projects:
     - name: zephyr
-      remote: zmkfirmware
-      revision: v3.5.0+zmk-fixes
+      remote: minhe7735
+      revision: text-expander 
       clone-depth: 1
       import:
         name-blocklist:
