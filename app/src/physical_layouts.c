@@ -209,8 +209,8 @@ static void zmk_physical_layouts_kscan_process_msgq(struct k_work *item) {
             continue;
         }
 
-        LOG_DBG("Row: %d, col: %d, position: %d, pressed: %s", ev.row, ev.column, position,
-                (pressed ? "true" : "false"));
+        LOG_DBG("Layout: %s, Row: %d, col: %d, position: %d, pressed: %s", active->display_name, ev.row,
+                ev.column, position, (pressed ? "true" : "false"));
         raise_zmk_position_state_changed(
             (struct zmk_position_state_changed){.source = ZMK_POSITION_STATE_CHANGE_SOURCE_LOCAL,
                                                 .state = pressed,
